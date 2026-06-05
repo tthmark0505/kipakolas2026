@@ -4,10 +4,12 @@ import {
   Geist_Mono,
   Special_Gothic_Expanded_One,
 } from "next/font/google";
+
 import "./globals.css";
 
 import Header from "@/components/Header/Header";
 import { TimerProvider } from "@/components/Header/TimerContext";
+import PageTransition from "@/components/PageTransition/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +46,11 @@ export default function RootLayout({
         <TimerProvider>
           <Header />
 
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            <PageTransition key={children?.toString()}>
+  {children}
+</PageTransition>
+          </main>
         </TimerProvider>
       </body>
     </html>
