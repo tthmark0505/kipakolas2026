@@ -1,0 +1,33 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+
+  padding: 32px 48px;
+
+  font-family: var(--font-special-gothic);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.site-header a,
+.site-header button,
+.site-header div {
+  font-family: inherit;
+}
+
+.site-header button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
